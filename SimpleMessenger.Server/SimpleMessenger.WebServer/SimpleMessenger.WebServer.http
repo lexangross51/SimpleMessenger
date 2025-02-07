@@ -1,0 +1,6 @@
+@SimpleMessenger.WebServer_HostAddress = http://localhost:5092
+
+GET {{SimpleMessenger.WebServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

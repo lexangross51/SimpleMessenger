@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    background-color: rgba(236, 237, 240, 0.671);
+}
+
+.mainBlock {
+    box-shadow: 0 1px 2px;
+    padding: 0px 20px 10px 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.messagesBlock {
+    box-shadow: 0 1px 2px;
+    padding: 0px 20px 10px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 0.2rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+.messagesList {
+    padding: 0px;
+    list-style: none;
+}
+
+.messagesList:last-child {
+    margin-bottom: 0;
+}
+
+.messageItem {
+    font-size: 1.5rem;
+    background-color: #fbfdff;
+    padding: 5px 7px;
+    border-radius: 15px;
+    border: 1px solid #e3e4e6;
+    margin-bottom: 0.5rem;
+}
+
+.messageItem:hover {
+    background-color: #e5e8eb;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="time"] {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
