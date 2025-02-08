@@ -8,12 +8,20 @@ using SimpleMessenger.WebServer.Services.Abstractions;
 
 namespace SimpleMessenger.WebServer.Conrollers;
 
+/// <summary>
+/// Контроллер для управления сообщениями
+/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 public class MessagesController(IMediator mediator, IHub hub, ILogger<MessagesController> logger) : ControllerBase
 {
+    /// <summary>
+    /// Создание нового сообщения и пересылка клиентам по WebSocket
+    /// </summary>
+    /// <param name="message"> Модель, представляющая создаваемое сообщение </param>
+    /// <returns></returns>
     [HttpPost]
-    public async Task<IActionResult> SendMessage([FromBody]CreateMessageVm message)
+    public async Task<IActionResult> SendMessage([FromBody]CreateMessageDto message)
     {
         var command = new CreateMessageCommand
         {
@@ -51,6 +59,11 @@ public class MessagesController(IMediator mediator, IHub hub, ILogger<MessagesCo
         return Ok();
     }
 
+    /// <summary>
+    /// Получение истории сообщений за период
+    /// </summary>
+    /// <param name="messages"> Модель, задающая период времени </param>
+    /// <returns></returns>
     [HttpPost("history")]
     public async Task<IActionResult> Messages([FromBody]GetMessagesDto messages)
     {

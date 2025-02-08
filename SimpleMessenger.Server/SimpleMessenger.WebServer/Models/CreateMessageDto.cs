@@ -1,6 +1,6 @@
 ﻿namespace SimpleMessenger.WebServer.Models;
 
-public class CreateMessageVm
+public class CreateMessageDto
 {
     public string Text { get; set; } = default!;
 
